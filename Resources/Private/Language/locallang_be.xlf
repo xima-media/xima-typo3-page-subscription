@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en" datatype="plaintext" original="messages">
+		<header/>
+		<body>
+			<trans-unit id="plugin.subscriptions.label">
+				<source>Subscriptions</source>
+			</trans-unit>
+			<trans-unit id="plugin.subscriptions.description">
+				<source>List all subscriptions of a frontend user</source>
+			</trans-unit>
+			<trans-unit id="plugin.favorites.label">
+				<source>Favorites</source>
+			</trans-unit>
+			<trans-unit id="plugin.favorites.description">
+				<source>List all favorites of a frontend user</source>
+			</trans-unit>
+			<trans-unit id="button.subscriptions.help">
+				<source>Count of current subscriptions registered for this page</source>
+			</trans-unit>
+			<trans-unit id="tt_content.ignore_element_ids">
+				<source>Only page subscriptions</source>
+			</trans-unit>
+			<trans-unit id="tt_content.filter_element_ids">
+				<source>Partial filter for element ids (e.g. "sys_file")</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

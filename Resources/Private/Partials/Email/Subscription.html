@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<h2>
+    <f:render partial="Icon" arguments="{icon: 'apps-pagetree-page-default'}"/>
+    <a href="{subscription.page.link}">{subscription.page.title}</a>
+</h2>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" class="entries">
+    <tbody>
+    <f:for each="{subscription.updates}" as="update">
+        <f:render partial="Email/Update" arguments="{update: update}"/>
+    </f:for>
+    </tbody>
+</table>

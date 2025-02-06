@@ -1,0 +1,50 @@
+pageWatchCheck = PAGE
+pageWatchCheck {
+  typeNum = 1728035511
+  config {
+    contentType = application/json
+  }
+}
+
+# page.includeJSFooterlibs {
+#    pageWatch = EXT:xima_typo3_page_subscription/Resources/Public/JavaScript/Listener.js
+#    pageWatch.type = module
+#}
+
+plugin.tx_ximatypo3pagesubscription {
+    view {
+        templateRootPaths {
+            0 = EXT:xima_typo3_page_subscription/Resources/Private/Templates/
+            1 = {$plugin.tx_ximatypo3pagesubscription.view.templateRootPath}
+        }
+
+        partialRootPaths {
+            0 = EXT:xima_typo3_page_subscription/Resources/Private/Partials/
+            1 = {$plugin.tx_ximatypo3pagesubscription.view.partialRootPath}
+        }
+
+        layoutRootPaths {
+            0 = EXT:xima_typo3_page_subscription/Resources/Private/Layouts/
+            1 = {$plugin.tx_ximatypo3pagesubscription.view.layoutRootPath}
+        }
+    }
+}
+
+module.tx_ximatypo3pagesubscription {
+    view {
+        templateRootPaths {
+            0 = EXT:xima_typo3_page_subscription/Resources/Private/Templates/
+            1 = {$module.tx_ximatypo3pagesubscription.view.templateRootPath}
+        }
+
+        partialRootPaths {
+            0 = EXT:xima_typo3_page_subscription/Resources/Private/Partials/
+            1 = {$module.tx_ximatypo3pagesubscription.view.partialRootPath}
+        }
+
+        layoutRootPaths {
+            0 = EXT:xima_typo3_page_subscription/Resources/Private/Layouts/
+            1 = {$module.tx_ximatypo3pagesubscription.view.layoutRootPath}
+        }
+    }
+}

@@ -1,0 +1,8 @@
+<html data-namespace-typo3-fluid="true">
+
+<li>
+    <a href="{update.link}">
+        {f:if(condition: update.title, then: '{update.title -> f:format.crop(maxCharacters: 30)}', else: '[{f:translate(key:
+        \'LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.no_title\')}]')}
+    </a>
+</li>

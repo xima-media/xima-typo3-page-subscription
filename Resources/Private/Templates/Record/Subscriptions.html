@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Record/Default"/>
+
+<f:section name="main">
+    <h3>
+        <f:translate key="plugin.subscriptions.heading" extensionName="XimaTypo3PageSubscription" />
+    </h3>
+    <p>
+        <f:translate key="plugin.subscriptions.description" extensionName="XimaTypo3PageSubscription" />
+    </p>
+    <ul>
+        <f:for each="{subscriptions}" as="subscription">
+            <li>
+                <f:if condition="{subscription.element_id}">
+                    <xtps:elementTitle elementId="{subscription.element_id}" />
+                </f:if>
+                <a href="{f:uri.page(pageUid: subscription.pid)}">{subscription.title}</a>
+                <button
+                    type="button"
+                    data-page-subscription-subscription-toggle
+                    data-page-subscription-pid="{subscription.pid}"
+                    >
+                    <span data-page-subscription-inactive class="hidden"><f:translate key="plugin.subscriptions.actions.subscribe" extensionName="XimaTypo3PageSubscription" /></span>
+                    <span data-page-subscription-active class="hidden"><f:translate key="plugin.subscriptions.actions.unsubscribe" extensionName="XimaTypo3PageSubscription" /></span>
+                </button>
+            </li>
+        </f:for>
+    </ul>
+</f:section>

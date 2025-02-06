@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<f:layout name="Record/Default"/>
+
+<f:section name="main">
+    <h3>
+        <f:translate key="plugin.favorites.heading" extensionName="XimaTypo3PageSubscription" />
+    </h3>
+    <p>
+        <f:translate key="plugin.favorites.description" extensionName="XimaTypo3PageSubscription" />
+    </p>
+    <ul>
+        <f:for each="{favorites}" as="favorite">
+            <li>
+                {favorite.title}
+                <button
+                    type="button"
+                    data-page-subscription-favorite-toggle
+                    data-page-subscription-pid="{favorite.pid}"
+                >
+                    <span data-page-subscription-inactive class="hidden"><f:translate key="plugin.favorites.actions.save" extensionName="XimaTypo3PageSubscription" /></span>
+                    <span data-page-subscription-active class="hidden"><f:translate key="plugin.favorites.actions.unsave" extensionName="XimaTypo3PageSubscription" /></span>
+                </button>
+            </li>
+        </f:for>
+    </ul>
+</f:section>

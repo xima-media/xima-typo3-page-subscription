@@ -1,0 +1,26 @@
+mod.wizards.newContentElement.wizardItems {
+    plugins {
+        elements {
+            ximatypo3pagesubscription_subscriptions {
+                iconIdentifier = actions-eye
+                title = LLL:EXT:xima_typo3_page_subscription/Resources/Private/Language/locallang_be.xlf:plugin.subscriptions.label
+                description = LLL:EXT:xima_typo3_page_subscription/Resources/Private/Language/locallang_be.xlf:plugin.subscriptions.description
+                tt_content_defValues {
+                    CType = ximatypo3pagesubscription_subscriptions
+                }
+            }
+            ximatypo3pagesubscription_favorites {
+                iconIdentifier = actions-star
+                title = LLL:EXT:xima_typo3_page_subscription/Resources/Private/Language/locallang_be.xlf:plugin.favorites.label
+                description = LLL:EXT:xima_typo3_page_subscription/Resources/Private/Language/locallang_be.xlf:plugin.favorites.description
+                tt_content_defValues {
+                    CType = ximatypo3pagesubscription_favorites
+                }
+            }
+        }
+
+        show := addToList(ximatypo3pagesubscription_subscriptions,ximatypo3pagesubscription_favorites)
+    }
+}
+
+mod.web_layout.tt_content.preview.ximatypo3pagesubscription_subscriptions = EXT:xima_typo3_page_subscription/Resources/Private/Templates/Backend/Subscriptions.html

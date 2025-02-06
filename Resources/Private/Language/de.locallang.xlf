@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en" datatype="plaintext" original="messages">
+		<header/>
+		<body>
+			<!-- Plugin -->
+			<trans-unit id="plugin.subscriptions.heading">
+				<source />
+				<target>Beobachtungen</target>
+			</trans-unit>
+			<trans-unit id="plugin.subscriptions.description">
+				<source />
+				<target>Verwalten sie hier alle aktiv beobachteten Seiten.</target>
+			</trans-unit>
+			<trans-unit id="plugin.subscriptions.action.subscribe">
+				<source />
+				<target>Beobachten</target>
+			</trans-unit>
+			<trans-unit id="plugin.subscriptions.action.unsubscribe">
+				<source />
+				<target>Beobachtung beenden</target>
+			</trans-unit>
+			<trans-unit id="plugin.subscriptions.message.removed">
+				<source />
+				<target>Beobachtung entfernt</target>
+			</trans-unit>
+			<trans-unit id="plugin.favorites.heading">
+				<source />
+				<target>Favoriten</target>
+			</trans-unit>
+			<trans-unit id="plugin.favorites.description">
+				<source />
+				<target>Verwalten sie hier alle favorisierten Seiten.</target>
+			</trans-unit>
+			<trans-unit id="plugin.favorites.action.save">
+				<source />
+				<target>Favorisieren</target>
+			</trans-unit>
+			<trans-unit id="plugin.favorites.action.unsave">
+				<source />
+				<target>Favorisierung beenden</target>
+			</trans-unit>
+			<trans-unit id="plugin.favorites.message.removed">
+				<source />
+				<target>Favorit entfernt</target>
+			</trans-unit>
+			<!-- Email -->
+			<trans-unit id="email.subject">
+				<source />
+				<target>Änderungsbenachrichtigung</target>
+			</trans-unit>
+			<trans-unit id="email.header">
+				<source />
+				<target>Änderungsbenachrichtigung</target>
+			</trans-unit>
+			<trans-unit id="email.intro">
+				<source />
+				<target>Guten Tag %s,</target>
+			</trans-unit>
+			<trans-unit id="email.description">
+				<source />
+				<target><![CDATA[Die folgende(n) <strong>%s</strong> Änderung(en) bezüglich ihrer abonnierten Beobachtung(en) sind kürzlich aufgetreten:]]></target>
+			</trans-unit>
+			<trans-unit id="email.explanation">
+				<source />
+				<target><![CDATA[Diese Benachrichtigung wurde ihnen zugestellt aufgrund ihrer Beobachtungseinstellungen. Verwalten sie diese Einstellungen <a href="%s">hier</a>.]]></target>
+			</trans-unit>
+			<trans-unit id="email.outro">
+				<source />
+				<target>Bleiben sie auf dem Laufenden.</target>
+			</trans-unit>
+			<trans-unit id="email.update.type.1">
+				<source />
+				<target>Das Element "%s" wurde neu hinzugefügt</target>
+			</trans-unit>
+			<trans-unit id="email.update.type.2">
+				<source />
+				<target>Das Element "%s" wurde kürzlich aktualisiert</target>
+			</trans-unit>
+			<trans-unit id="email.update.tt_content.type.1">
+				<source />
+				<target>Das Inhaltselement "%s" wurde neu hinzugefügt</target>
+			</trans-unit>
+			<trans-unit id="email.update.tt_content.type.2">
+				<source />
+				<target>Das Inhaltselement "%s" wurde kürzlich aktualisiert</target>
+			</trans-unit>
+			<trans-unit id="email.update.sys_file.type.1">
+				<source />
+				<target>Die Datei wurde neu hinzugefügt</target>
+			</trans-unit>
+			<trans-unit id="email.update.sys_file.type.2">
+				<source />
+				<target>Die Datei wurde kürzlich aktualisiert</target>
+			</trans-unit>
+			<trans-unit id="email.update.children">
+				<source />
+				<target>Die folgenden Unterelemente wurden vor kurzem hinzugefügt/aktualisiert:</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

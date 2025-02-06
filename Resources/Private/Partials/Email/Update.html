@@ -1,0 +1,32 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"data-namespace-typo3-fluid="true">
+
+<tr class="entry">
+    <td class="icon">
+        <f:render partial="Icon" arguments="{table: update.table, ctype: update.ctype}"/>
+    </td>
+    <td class="entry-body">
+        <strong>
+            <a href="{update.link}">
+                {f:if(condition: update.title, then: '{update.title -> f:format.crop(maxCharacters: 30)}', else:
+                '[{f:translate(key:
+                \'LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.no_title\')}]')}
+            </a>
+        </strong>
+        <ul>
+            <li>
+                <f:format.raw>
+                    <f:translate key="email.update.{update.table}.type.{update.type}" default="{f:translate(key:'email.update.type.{update.type}',extensionName:'XimaTypo3PageSubscription', arguments:'{0: update.label}')}" arguments="{0: update.label}" extensionName="XimaTypo3PageSubscription" />
+                </f:format.raw>
+            </li>
+            <f:if condition="{update.children}">
+                <li><f:translate key="email.update.children" extensionName="XimaTypo3PageSubscription" />
+                    <ul>
+                        <f:for each="{update.children}" as="child">
+                            <f:render partial="Email/InlineUpdate" arguments="{update: child}"/>
+                        </f:for>
+                    </ul>
+                </li>
+            </f:if>
+        </ul>
+    </td>
+</tr>

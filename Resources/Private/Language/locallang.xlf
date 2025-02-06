@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en" datatype="plaintext" original="messages">
+		<header/>
+		<body>
+			<!-- Plugin -->
+			<trans-unit id="plugin.subscriptions.heading">
+				<source>Subscriptions</source>
+			</trans-unit>
+			<trans-unit id="plugin.subscriptions.description">
+				<source>Manage your existing subscriptions.</source>
+			</trans-unit>
+			<trans-unit id="plugin.subscriptions.action.subscribe">
+				<source>Subscribe</source>
+			</trans-unit>
+			<trans-unit id="plugin.subscriptions.action.unsubscribe">
+				<source>Unsubscribe</source>
+			</trans-unit>
+			<trans-unit id="plugin.subscriptions.message.removed">
+				<source>Subscription removed</source>
+			</trans-unit>
+			<trans-unit id="plugin.favorites.heading">
+				<source>Favorites</source>
+			</trans-unit>
+			<trans-unit id="plugin.favorites.description">
+				<source>Manage your existing favorites.</source>
+			</trans-unit>
+			<trans-unit id="plugin.favorites.action.save">
+				<source>Save</source>
+			</trans-unit>
+			<trans-unit id="plugin.favorites.action.unsave">
+				<source>Unsave</source>
+			</trans-unit>
+			<trans-unit id="plugin.favorites.message.removed">
+				<source>Favorite removed</source>
+			</trans-unit>
+			<!-- Email -->
+			<trans-unit id="email.subject">
+				<source>Update notification</source>
+			</trans-unit>
+			<trans-unit id="email.header">
+				<source>Update notification</source>
+			</trans-unit>
+			<trans-unit id="email.intro">
+				<source>Hello %s,</source>
+			</trans-unit>
+			<trans-unit id="email.description">
+				<source><![CDATA[The following <strong>%s</strong> update(s) on your subscription(s) occur recently:]]></source>
+			</trans-unit>
+			<trans-unit id="email.explanation">
+				<source><![CDATA[These notifications are sent to you because you are subscribed to several pages. Manage your subscriptions <a href="%s">here</a>.]]></source>
+			</trans-unit>
+			<trans-unit id="email.outro">
+				<source>Keep up to date!</source>
+			</trans-unit>
+			<trans-unit id="email.update.type.1">
+				<source>The element "%s" was newly added</source>
+			</trans-unit>
+			<trans-unit id="email.update.type.2">
+				<source>The element "%s" was recently updated</source>
+			</trans-unit>
+			<trans-unit id="email.update.tt_content.type.1">
+				<source>The content element "%s" was newly added</source>
+			</trans-unit>
+			<trans-unit id="email.update.tt_content.type.2">
+				<source>The content element "%s" was recently updated</source>
+			</trans-unit>
+			<trans-unit id="email.update.sys_file.type.1">
+				<source>The file was newly added</source>
+			</trans-unit>
+			<trans-unit id="email.update.sys_file.type.2">
+				<source>The file was recently updated</source>
+			</trans-unit>
+			<trans-unit id="email.update.children">
+				<source>The following sub elements were recently added/updated:</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

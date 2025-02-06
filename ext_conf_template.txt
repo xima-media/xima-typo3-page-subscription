@@ -1,0 +1,12 @@
+# cat=basic//100; type=boolean; label=Enable subscription count in backend page header
+beSubscriptionCount = 1
+# cat=basic//101; type=boolean; label=Delete subscription if page is missing (hidden/deleted)
+deleteSubscriptionOnMissingPage = 1
+# cat=basic//102; type=boolean; label=Force the page to be uncached for crawler calls
+forceUncachedPageForCrawler = 1
+# cat=email//200; type=string; label=Email template
+emailTemplate = EXT:xima_typo3_page_subscription/Resources/Private/Templates/Email/Notification.html
+# cat=email//201; type=string; label=Path to SVG logo file
+emailLogo =
+# cat=email//202; type=integer; label=PID for subscription overview page
+emailSubscriptionOverviewPid =

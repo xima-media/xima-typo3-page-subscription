@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en" datatype="plaintext" original="messages">
+		<header/>
+		<body>
+			<trans-unit id="plugin.subscriptions.label">
+				<source />
+				<target>Übersicht beobachtete Seiten</target>
+			</trans-unit>
+			<trans-unit id="plugin.subscriptions.description">
+				<source />
+				<target>Listete alle Seiten mit Beobachtung eines Frontend Nutzers</target>
+			</trans-unit>
+			<trans-unit id="plugin.favorites.label">
+				<source />
+				<target>Übersicht aller Favoriten</target>
+			</trans-unit>
+			<trans-unit id="plugin.favorites.description">
+				<source />
+				<target>Listet alle favorisierten Seiten eines Frontend Nutzers</target>
+			</trans-unit>
+			<trans-unit id="button.subscriptions.help">
+				<source />
+				<target>Anzahl der aktuellen Beobachtungen, die auf dieser Seite registriert sind</target>
+			</trans-unit>
+			<trans-unit id="tt_content.ignore_element_ids">
+				<source />
+				<target>Nur Seitenbeobachtungen</target>
+			</trans-unit>
+			<trans-unit id="tt_content.filter_element_ids">
+				<source />
+				<target>Teilfilter für Element Ids (zB "sys_file")</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

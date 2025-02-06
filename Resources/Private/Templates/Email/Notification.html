@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Email/Default"/>
+
+<f:section name="preview"></f:section>
+<f:section name="header">
+    <f:render partial="Email/Header" arguments="{_all}"/>
+</f:section>
+<f:section name="Subject">New Login at xxx</f:section>
+
+
+<f:section name="main">
+    <h1>
+        <f:render partial="Icon" arguments="{icon: 'actions-brand-typo3', width: 30, height: 30}"/>
+        <f:translate key="email.header" extensionName="XimaTypo3PageSubscription"/>
+    </h1>
+    <p>
+        <f:translate key="email.intro" arguments="{0: feUser.username}" extensionName="XimaTypo3PageSubscription"/>
+    </p>
+    <p>
+        <f:format.raw>
+            <f:translate key="email.description" arguments="{0: countUpdates}"
+                         extensionName="XimaTypo3PageSubscription"/>
+        </f:format.raw>
+    </p>
+    <f:for each="{subscriptions}" as="subscription">
+        <f:render partial="Email/Subscription" arguments="{subscription: subscription}"/>
+    </f:for>
+    <p>
+        <f:format.raw>
+            <f:translate key="email.explanation" arguments="{0: subscriptionsOverview}"
+                         extensionName="XimaTypo3PageSubscription"/>
+        </f:format.raw>
+
+    </p>
+    <p>
+        <f:translate key="email.outro" extensionName="XimaTypo3PageSubscription"/>
+    </p>
+</f:section>
+
+<f:section name="footer">
+    <f:render partial="Email/Footer" arguments="{_all}"/>
+</f:section>

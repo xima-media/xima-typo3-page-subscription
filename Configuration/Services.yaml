@@ -1,0 +1,25 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Xima\XimaTypo3PageSubscription\:
+        resource: '../Classes/*'
+
+    Xima\XimaTypo3PageSubscription\Command\CheckUpdatesCommand:
+        tags:
+            -   name: console.command
+                command: 'page-subscription:check-updates'
+                description: 'Check subscriptions for updates and send notifications'
+
+    Xima\XimaTypo3PageSubscription\Command\InitSubscriptionsCommand:
+        tags:
+            -   name: console.command
+                command: 'page-subscription:init-subscriptions'
+                description: 'Initialize subscriptions with fingerprint'
+
+    Xima\XimaTypo3PageSubscription\EventListener\ModifyButtonBarEventListener:
+        tags:
+            -   name: event.listener
+                identifier: 'xima-typo3-page-subscription/backend/modify-button-bar'

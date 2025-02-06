@@ -1,0 +1,18 @@
+{namespace core = TYPO3\CMS\Core\ViewHelpers}
+
+<table class="table table-condensed table-hover">
+    <tbody>
+        <f:if condition="{tx_ximatypo3pagesubscription_ignore_element_ids}">
+            <tr>
+                <th>{f:translate(key: 'LLL:EXT:xima_typo3_page_subscription/Resources/Private/Language/locallang_be.xlf:tt_content.ignore_element_ids')}</th>
+                <td></td>
+            </tr>
+        </f:if>
+        <f:if condition="{tx_ximatypo3pagesubscription_filter_element_ids}">
+            <tr>
+                <th>{f:translate(key: 'LLL:EXT:xima_typo3_page_subscription/Resources/Private/Language/locallang_be.xlf:tt_content.filter_element_ids')}</th>
+                <td>{tx_ximatypo3pagesubscription_filter_element_ids}</td>
+            </tr>
+        </f:if>
+    </tbody>
+</table>
