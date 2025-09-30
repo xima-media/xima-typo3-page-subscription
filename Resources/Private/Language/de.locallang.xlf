@@ -10,7 +10,7 @@
 			</trans-unit>
 			<trans-unit id="plugin.subscriptions.description">
 				<source />
-				<target>Verwalten sie hier alle aktiv beobachteten Seiten.</target>
+				<target>Verwalten Sie hier alle aktiv beobachteten Seiten.</target>
 			</trans-unit>
 			<trans-unit id="plugin.subscriptions.action.subscribe">
 				<source />
@@ -30,7 +30,7 @@
 			</trans-unit>
 			<trans-unit id="plugin.favorites.description">
 				<source />
-				<target>Verwalten sie hier alle favorisierten Seiten.</target>
+				<target>Verwalten Sie hier alle favorisierten Seiten.</target>
 			</trans-unit>
 			<trans-unit id="plugin.favorites.action.save">
 				<source />
@@ -59,15 +59,15 @@
 			</trans-unit>
 			<trans-unit id="email.description">
 				<source />
-				<target><![CDATA[Die folgende(n) <strong>%s</strong> Änderung(en) bezüglich ihrer abonnierten Beobachtung(en) sind kürzlich aufgetreten:]]></target>
+				<target><![CDATA[Die folgende(n) <strong>%s</strong> Änderung(en) bezüglich Ihrer abonnierten Beobachtung(en) sind kürzlich aufgetreten:]]></target>
 			</trans-unit>
 			<trans-unit id="email.explanation">
 				<source />
-				<target><![CDATA[Diese Benachrichtigung wurde ihnen zugestellt aufgrund ihrer Beobachtungseinstellungen. Verwalten sie diese Einstellungen <a href="%s">hier</a>.]]></target>
+				<target><![CDATA[Diese Benachrichtigung wurde Ihnen zugestellt aufgrund Ihrer Beobachtungseinstellungen. Verwalten Sie diese Einstellungen <a href="%s">hier</a>.]]></target>
 			</trans-unit>
 			<trans-unit id="email.outro">
 				<source />
-				<target>Bleiben sie auf dem Laufenden.</target>
+				<target>Bleiben Sie auf dem Laufenden.</target>
 			</trans-unit>
 			<trans-unit id="email.update.type.1">
 				<source />
