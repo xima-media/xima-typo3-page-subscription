@@ -33,7 +33,7 @@ class RecordUtility
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('fe_users');
 
         $query = $queryBuilder
-            ->select('uid', 'username', 'email')
+            ->select('uid', 'username', 'name', 'email')
             ->from('fe_users')
             ->where(
                 $queryBuilder->expr()->eq('uid', $queryBuilder->createNamedParameter($uid, Connection::PARAM_INT))

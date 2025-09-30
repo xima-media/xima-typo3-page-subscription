@@ -15,7 +15,8 @@
         <f:translate key="email.header" extensionName="XimaTypo3PageSubscription"/>
     </h1>
     <p>
-        <f:translate key="email.intro" arguments="{0: feUser.username}" extensionName="XimaTypo3PageSubscription"/>
+        <f:variable name="displayname">{feUser.name ?: feUser.username}</f:variable>
+        <f:translate key="email.intro" arguments="{0: displayname}" extensionName="XimaTypo3PageSubscription"/>
     </p>
     <p>
         <f:format.raw>
