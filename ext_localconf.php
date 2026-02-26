@@ -40,3 +40,11 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['registerInter
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['registerInterpreter'][\GeorgRinger\News\Domain\Model\NewsDefault::class] = \Xima\XimaTypo3PageSubscription\Interpreter\NewsInterpreter::class;
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['registerInterpreter'][\GeorgRinger\News\Domain\Model\NewsInternal::class] = \Xima\XimaTypo3PageSubscription\Interpreter\NewsInterpreter::class;
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['registerInterpreter'][\GeorgRinger\News\Domain\Model\NewsExternal::class] = \Xima\XimaTypo3PageSubscription\Interpreter\NewsInterpreter::class;
+
+$GLOBALS['TYPO3_CONF_VARS']['LOG']['Xima']['XimaTypo3PageSubscription']['writerConfiguration'] = [
+    \Psr\Log\LogLevel::ERROR => [
+        \TYPO3\CMS\Core\Log\Writer\FileWriter::class => [
+            'logFile' => \TYPO3\CMS\Core\Core\Environment::getVarPath() . '/log/xima_typo3_page_subscription.log',
+        ],
+    ],
+];
