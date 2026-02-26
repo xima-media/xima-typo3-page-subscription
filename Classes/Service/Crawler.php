@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Xima\XimaTypo3PageSubscription\Service;
 
+use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\ServerException;
+use Psr\Log\LoggerInterface;
 use TYPO3\CMS\Core\Authentication\CommandLineUserAuthentication;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Core\Bootstrap;
@@ -15,6 +18,10 @@ use Xima\XimaTypo3PageSubscription\Utility\UrlHelper;
 
 class Crawler
 {
+    public function __construct(
+        private readonly LoggerInterface $logger,
+    ) {}
+
     /**
      * @throws \TYPO3\CMS\Core\Exception\SiteNotFoundException
      * @throws \TYPO3\CMS\Frontend\Typolink\UnableToLinkException
@@ -31,18 +38,26 @@ class Crawler
         $additionalParameter = (bool)(GeneralUtility::makeInstance(ExtensionConfiguration::class))->get(Configuration::EXT_KEY)['forceUncachedPageForCrawler'] ? '?no_cache=1' : '';
 
         $requestFactory = GeneralUtility::makeInstance(RequestFactory::class);
-        $response = $requestFactory->request(
-            $url . $additionalParameter,
-            'GET',
-            [
-                'headers' => [
-                    'X-PageSubscription-Crawler' => true,
-                    'Cache-Control' => 'no-cache, no-store, must-revalidate',
-                    'Pragma' => 'no-cache',
-                    'Expires' => '0',
-                ],
-            ]
-        );
+        try {
+            $response = $requestFactory->request(
+                $url . $additionalParameter,
+                'GET',
+                [
+                    'headers' => [
+                        'X-PageSubscription-Crawler' => true,
+                        'Cache-Control' => 'no-cache, no-store, must-revalidate',
+                        'Pragma' => 'no-cache',
+                        'Expires' => '0',
+                    ],
+                ]
+            );
+        } catch (ClientException $e) {
+            $this->logger->error('Client exception: ' . $e->getMessage(), ['url' => $url . $additionalParameter]);
+            return [];
+        } catch (ServerException $e) {
+            $this->logger->error('Server exception: ' . $e->getMessage(), ['url' => $url . $additionalParameter]);
+            return [];
+        }
 
         $content = $response->getBody()->getContents();
 
