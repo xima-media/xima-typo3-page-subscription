@@ -35,8 +35,9 @@ class UrlHelper
         self::createTypo3Request($site, $siteLanguage);
         $typolinkConfiguration = [
             'parameter' => $pageId,
+            'forceAbsoluteUrl' => true,
+            'linkAccessRestrictedPages' => true,
         ];
-        $typolinkConfiguration['forceAbsoluteUrl'] = true;
 
         return $linkFactory->create('', $typolinkConfiguration, $contentObjectRenderer)->getUrl();
     }
