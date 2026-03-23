@@ -46,4 +46,6 @@ class PageSubscription {
   }
 }
 
-export default new PageSubscription();
+const pageSubscription = new PageSubscription();
+export default pageSubscription;
+window.PageSubscription = pageSubscription;
