@@ -122,14 +122,12 @@ The technical implementation is based on the following concepts:
 <a name="javascript"></a>
 ### JavaScript
 
-Use the `PageSubscription` class to handle the subscription of pages in the frontend. Example below:
+Once the TypoScript is included, `PageSubscription` is available globally as `window.PageSubscription`. No import or bundler configuration is needed.
 
 ```javascript
-import PageSubscription from '../path/to/extension/xima_typo3_page_subscription/Resources/Public/JavaScript/PageSubscription.js';
-
 const toggleButton = document.querySelector('.toggle-subscription');
 toggleButton.addEventListener("click", async function(){
-    const data = await PageSubscription.toggle(this, PageSubscription.Type.Subscription, this.element.getAttribute('data-page-subscription-pid'));
+    const data = await window.PageSubscription.toggle(this, window.PageSubscription.Type.Subscription, this.getAttribute('data-page-subscription-pid'));
     if (data.result == true) {
         this.classList.add('subscribed');
     } else {
@@ -137,6 +135,8 @@ toggleButton.addEventListener("click", async function(){
     }
 });
 ```
+
+If you are using a JavaScript bundler and prefer a module import, the file also ships a standard ES module export:
 
 <a name="viewhelper"></a>
 ### ViewHelper

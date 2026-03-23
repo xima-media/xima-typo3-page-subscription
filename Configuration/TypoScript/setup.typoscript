@@ -6,10 +6,10 @@ pageWatchCheck {
   }
 }
 
-# page.includeJSFooterlibs {
-#    pageWatch = EXT:xima_typo3_page_subscription/Resources/Public/JavaScript/Listener.js
-#    pageWatch.type = module
-#}
+page.includeJSLibs {
+    ximaPageSubscription = EXT:xima_typo3_page_subscription/Resources/Public/JavaScript/PageSubscription.js
+    ximaPageSubscription.type = module
+}
 
 plugin.tx_ximatypo3pagesubscription {
     view {
